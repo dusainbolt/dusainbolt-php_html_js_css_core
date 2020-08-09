@@ -3,10 +3,11 @@ function showModal(modal,type) {
 }
 
 function showModalConfirm(modal,type, id = null) {
+    console.log(modal, id, type);
     document.getElementById(modal).style.display=type;
-    document.getElementById('modal-title').innerHTML= "Xóa sinh viên " + id;
-    document.getElementById('modal-description').innerHTML="Bạn có chắc muốn xóa toàn bộ dữ liệu của sinh viên " + id;
-    document.getElementById('modal-button').href="service/removeStudent.php?ma_sv="+id;
+    document.getElementById('modal-title').innerHTML= "Remove medicine id " + id;
+    document.getElementById('modal-description').innerHTML="Are you accept to remove medicine " + id;
+    document.getElementById('modal-button').href="service/removeMedicine.php?id="+id;
 
 }
 
@@ -28,21 +29,24 @@ function changeInputUpload(input) {
 
 function validateForm() {
     let text = "Not valid";
+    let image = document.getElementById("upload");
     const data = {
         name: document.getElementById("name").value,
         date: document.getElementById("date").value,
         uses: document.getElementById("uses").value,
         type: document.getElementById("type").value,
         amount: document.getElementById("amount").value,
-        upload: document.getElementById("upload").files.length,
+        upload: image.files.length,
     }
   let valid = true;
   for(const [key, value] of Object.entries(data)){
+      if(key === "upload" && image.getAttribute("data")){
+        continue;
+      }
       text = value ? "" : "Not valid";
       valid = value ? true : false;
       document.getElementById(`error-${key}`).innerHTML = text;
   }
-  console.log(valid);
   if(valid){
     document.getElementById("formDetail").submit();
   }

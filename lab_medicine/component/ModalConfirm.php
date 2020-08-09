@@ -9,7 +9,7 @@
     </div>
     <div class="modal-footer">
         <div class="modal-button-group">
-            <a id="modal-button" class="modal-button btn-primary">Đồng ý</a>
+            <a id="modal-button" class="modal-button btn-primary">Accept remove</a>
         <div>
     </div>
 </div>

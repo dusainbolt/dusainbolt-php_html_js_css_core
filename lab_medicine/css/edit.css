@@ -43,6 +43,10 @@
     padding: 0 2%;
 }
 
+.form-group-row div.form-group-edit{
+    width: 70%;
+}
+
 .form-group-row .form-group  input{
     width: 96%;
 }
@@ -104,6 +108,8 @@
 
 .form-group-upload{
     margin-top: 25px; 
+    overflow: hidden;
+    height: 320px;
 }
 
 .form-group-upload:hover .upload-wrapper{
@@ -133,6 +139,14 @@
 
 .button-submit:hover{
     background-color: #bcbe6c;
+}
+
+.button-remove{
+    background-color: #ff6f6f;
+}
+
+.button-remove:hover{
+    background-color: #e04848;
 }
 
 .button-group button{

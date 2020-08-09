@@ -5,7 +5,6 @@
     }
 
     function genderDataSelect($data, $check = ""){
-        var_dump($check);
         foreach($data as $value){
             echo '<option value="'.$value.'" '.($value === $check ? "selected" : "").'>'.$value.'</option>';
         }
@@ -29,5 +28,10 @@
 
     function checkActiveMenu($path){
        return strpos($_SERVER['REQUEST_URI'], $path) == 0 ? "" : "active";
+    }
+
+    function convertDateInput($value){
+        if(empty($value)) return "";
+        return substr($value, 0, 10);
     }
 ?>

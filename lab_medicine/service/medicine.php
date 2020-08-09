@@ -11,15 +11,18 @@
         $type = isset($_POST['type']) ? $_POST['type'] : $valid = false;
         $amount = isset($_POST['amount']) ? $_POST['amount'] : $valid = false;
         $note = isset($_POST['note']) ? $_POST['note'] : "";
+        $lastUpload = isset($_POST['last_upload']) ? $_POST['last_upload'] : "";
         $image = uploadFile("upload","../upload/");
         // insert data
         if ($valid) {
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                if(isset($_GET["edit"])){
-                    $id = $_GET("edit");
-                    $sql = "UPDATE sinhvien SET ten_sv=?, ns=?, gt=?, email=?, dt=?, matkhau=? WHERE ma_sv=".$ma_sv;
-                    $data = array($name,$year_brthday,$gender,$email,$phone_number,$password);
+                if(isset($_GET["id"])){
+                    $id = $_GET["id"];
+                    $image = $image ? $image : $lastUpload;
+                    var_dump($image);
+                    $sql = "UPDATE medicine SET name=?, date=?, uses=?, type=?, amount=?, note=?, image=? WHERE id=".$id;
+                    $data = array($name,$date,$uses,$type,$amount,$note,$image);
                 }else{
                     $sql= "INSERT INTO medicine (name,date,uses,type,amount,note,image) values(?, ?, ?, ?, ?, ?, ?)";
                     $data = array($name,$date,$uses,$type,$amount,$note,$image);

@@ -3,6 +3,7 @@ include 'layout/Header.php';
 
 //item action
 $id = null;
+$edit = false;
 //Process data list
 $currentSearch = [];
 $name  = isset($_GET['name']) ? $currentSearch['name'] = $_GET['name'] : "";

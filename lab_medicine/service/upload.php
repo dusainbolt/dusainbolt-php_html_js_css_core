@@ -9,8 +9,7 @@ function uploadFile($name, $target_dir){
 
     // Kiểm tra dữ liệu có bị lỗi không
     if ($_FILES[$name]['error'] != 0) {
-        echo "Dữ liệu upload bị lỗi";
-        die;
+        return "";
     }
 
     // Đã có dữ liệu upload, thực hiện xử lý file upload
@@ -56,6 +55,7 @@ function uploadFile($name, $target_dir){
     if ($_FILES[$name]["size"] > $maxfilesize) {
         echo "Không được upload ảnh lớn hơn $maxfilesize (bytes).";
         $allowUpload = false;
+        die;
     }
 
 

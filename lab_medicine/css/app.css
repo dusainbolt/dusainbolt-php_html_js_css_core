@@ -26,6 +26,9 @@ a{
     padding-left: 5px;
 }
 
+button{
+    background-color: #777777;
+}
 
 .button-left{
     float: left;
@@ -132,7 +135,7 @@ html, body{
     line-height: 40px;
     padding-left: 10px;
     border-radius: 10px 10px 0px 0px;
-    background: antiquewhite;
+    background: #bdbe90;
 }
 
 .modal-body{
@@ -156,14 +159,15 @@ html, body{
 }
 
 .modal-close {
-    color: #6a75ef;
+    color: #e5e7ff;
     line-height: 5px;
     position: absolute;
     right: 3px;
+    min-width: max-content;
     text-align: center;
     top: 10px;
-    min-width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
     text-decoration: none;
 }
 
