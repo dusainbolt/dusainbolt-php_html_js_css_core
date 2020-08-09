@@ -1,0 +1,155 @@
+.page-edit {
+    width: 650px;
+    margin: auto;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 12px; 
+}
+
+.page-edit .edit-title {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight:bold;
+    color: #797c11; 
+}
+
+.page-edit .form-edit {
+    width: 90%;
+    margin: auto;
+    padding-bottom: 30px;
+    height: auto;
+}
+.edit-title::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: #797c11;
+    margin: auto;
+}
+
+.form-group-row{
+    display: flex;
+    margin-top: 15px;
+}
+
+.form-group{
+    position: relative;
+}
+
+.form-group-row .form-group{
+    width: 48%;
+    padding: 0 2%;
+}
+
+.form-group-row .form-group  input{
+    width: 96%;
+}
+
+
+.form-group-row .form-group  select{
+    width: 100%;
+    height: 34px;
+}
+
+.form-group .input-date{
+    height: 30px;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: #58595b;
+    font-weight: 600;
+}
+.form-group label > span{
+    color: red;
+}
+
+.form-group input[type="file"] {
+    display: none;
+}
+
+
+.form-group .upload-button{
+    padding: 15px;
+    border-radius: 15px;
+    width: 92px;
+    height: 5px;
+    line-height: 5px;
+    cursor: pointer;
+    color: aliceblue;
+    background-color: #797c11;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    transition: background-color .3s;
+}
+
+.form-group .upload-button:hover{
+    background-color: #bcbe6c;
+}
+
+.form-group .upload-button:hover{
+    background-color: #bcbe6c;
+}
+
+.form-group .img-preview, .img-edit{
+    width: 96%;
+    margin: 0 2%;
+    border: solid 2px #797c11;
+}
+
+.form-group-upload{
+    margin-top: 25px; 
+}
+
+.form-group-upload:hover .upload-wrapper{
+    display: block;
+}
+
+.form-group .upload-wrapper {
+    background-color: #312c2c47;
+    height: 15px;
+    width: 96.5%;
+    margin-left: 2%;
+    position: absolute;
+    display: none;
+    top: 0.5%;
+    height: 316px;
+}
+
+.form-group-row .button-group{
+    width: 40%;
+    display: flex;
+    margin: auto;
+}
+
+.button-submit{
+    background-color: #797c11;
+}
+
+.button-submit:hover{
+    background-color: #bcbe6c;
+}
+
+.button-group button{
+    margin: 0 5px;
+}
+
+.form-group .error-field{
+    color: red;
+    font-size: 11px;
+}
+
+.error-img{
+    color: red;
+    font-size: 11px;
+    margin-left: 10px;
+}
+
+.button-cancel a{
+    color: white;
+}
